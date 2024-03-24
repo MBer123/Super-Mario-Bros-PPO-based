@@ -8,7 +8,7 @@ from Super_Mario_Bros import SuperMarioEnv
 # 多进程训练
 def make_env(rank, seed=0, render=False):
     def _init():
-        env_ = SuperMarioEnv(render=render, world=2, stage=1)  # 您自定义的环境
+        env_ = SuperMarioEnv(render=render, world=2, stage=1)  # 自定义的环境
         env_.seed(seed + rank)
         return env_
 

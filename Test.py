@@ -6,14 +6,14 @@ from CNN_PPO.Agent import PPO
 
 if __name__ == "__main__":
     env_name = 'SuperMario'
-    world = 2
-    stage = 1
+    world = 1
+    stage = 4
 
     env = SuperMarioEnv(render=True, train=True, world=world, stage=stage)
 
     # 用于保存模型的文件夹
-    # ckpt_dir = f"{world}-{stage}-finish"
-    ckpt_dir = f"SuperMario-PPO"
+    ckpt_dir = f"{world}-{stage}-finish"
+    # ckpt_dir = f"SuperMario-PPO"
 
     agent = PPO(action_dim=env.action_space.n,
                  state_dim=env.observation_space.shape,
